@@ -1,0 +1,7 @@
+{
+  "name": "Figma Plugin Boilerplate",
+  "id": "984933790715517361",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html"
+}
