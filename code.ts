@@ -3,6 +3,7 @@ figma.showUI(__html__);
 figma.ui.onmessage = msg => {
   if (msg.type === 'create-rectangles') {
     const nodes: SceneNode[] = [];
+
     for (let i = 0; i < msg.count; i++) {
       const rect = figma.createRectangle();
       rect.x = i * 150;
@@ -10,6 +11,7 @@ figma.ui.onmessage = msg => {
       figma.currentPage.appendChild(rect);
       nodes.push(rect);
     }
+    
     figma.currentPage.selection = nodes;
     figma.viewport.scrollAndZoomIntoView(nodes);
   }
